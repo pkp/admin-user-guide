@@ -40,7 +40,42 @@ The README here: [https://github.com/pkp/ojs](https://github.com/pkp/ojs) has in
    * cd ../../..
    * cp config.TEMPLATE.inc.php config.inc.php
 
-At this point you should have a fully prepared OJS 3.1 system and database ready to go.  
+At this point you should have a fully prepared OJS 3.1 system and database ready to go.
+
+## **Eliminate any possibility of scheduled tasks from being triggered in staging server**
+
+Delete the Acron plugin \(the Acron plugin can trigger scheduled tasks to be run without relying on a cron job\):
+
+* rm -rf plugins/generic/acron
+* rm -rf lib/pkp/plugins/generic/acron
+
+This plugin will have to be re-installed after you go to production, which, if you are running things via git, you can do by:
+
+* git checkout plugins/generic/acron
+* cd lib/pkp
+* git checkout plugins/generic/acron
+
+## Back up and copy the submission, public and database files
+
+These commands are done on the production install, and are your typical backup/archiving commands.
+
+* Database: we usually use mysqldump to make a copy of the database:
+  * mysqldump db\_name --opt --default-character-set=utf8 --result-file=~/client\_db.sql -u db\_user -p
+* Submission files: you can find the correct directory in the OJS config.inc.php file, look for the “files\_dir” parameter. We usually compress this to make it easier to transfer:
+  * cd &lt;submission files dir&gt;
+  * tar -cvzf ~/files.tar.gz ./
+* Public files: this can include things like cover images and so on, and is located in the OJS system directory, in the “public/“ subdirectory:
+  * cd &lt;ojs-system-dir&gt;/public
+  * tar -cvzf ~/public.tar.gz ./
+* Transfer the files to the staging server: we usually use scp or rsync. Your systems folks should know what to use here, but for us it’s usually something like:
+
+  * rsync -avz client\_db.sql username@stagingserver.org:/~
+  * rsync -avz public.tar.gz username@stagingserver.org:/~
+  * rsync -avz files.tar.gz username@stagingserver.org:/~
+
+  
+
+  
   
 
 
