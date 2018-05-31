@@ -1,10 +1,10 @@
 # Email
 
-**Primary and Technical Contacts**
+## **Primary and Technical Contacts**
 
 All PKP applications require that a primary and technical contact are configured under Setup for proper  daily operations. This has to be done for every journal, press or conference on the system. In OJS 2.x, this can be done under _Setup Step 1_. In OCS 2.x, this can be done under _Website Management Step 1_. IN OJS/OMP 3.x, this can be done under _Settings &gt; Journal &gt; Contact_.
 
-**Sending Mail**
+## **Sending Mail**
 
 By default, mail is sent through PHP's built-in `mail()` facility.
 
@@ -16,7 +16,7 @@ See [http://www.php.net/mail](http://www.php.net/mail) for more details on confi
 
 Our software can also be configured to use an SMTP server as specified in `config.inc.php`, either with or without authentication.
 
-**Setting a Bounce Address**
+## **Setting a Bounce Address**
 
 To control the address to which a bounced emails will be sent, you need to set the envelope sender address. Enable the `allow_envelope_sender` option in the `[email]` section of the configuration file; when this option is enabled, a "Bounce Address" field appears in the Email section under Setup.
 
@@ -26,7 +26,7 @@ For example, Sendmail keeps a list of trusted users in the file "/etc/mail/trust
 
 The command-line option used to set the envelope sender is `-f`.
 
-**Configuring the system to use GMail SMTP**
+## **Configuring the system to use GMail SMTP**
 
 To use gmail SMTP to send email from OJS system. You can use the following setting in config.inc.php
 
@@ -66,17 +66,19 @@ smtp_password = "password"
 
 Note that you may have to additionally configure application-specific passwords in gmail; see [https://support.google.com/accounts/answer/185833?hl=en](https://support.google.com/accounts/answer/185833?hl=en) for details.
 
-**Troubleshooting email problems:**
+## **Troubleshooting email problems**
 
 If emails aren't being received by some users, the first thing to do is check to see if you yourself can receive email. Try sending an email to yourself using the system. If you received it, OJS is probably sending email fine. You should then ask the user with the problem to check their email's spam/junk folders. 
 
 If the user can find no record whatsoever of the email being filtered as spam or junk, you may be encountering a **Sender Policy Framework** \(SPF\) validation problem with their server. You can confirm this by viewing your server's mail log to see if there are any reported receipt blockages/returns with SPF validation errors as the result.
 
-**Explanation of the problem, and the solution:**
+### **Explanation of the problem, and the solution**
 
 As of version 2.4.6, OJS included a change to the way emails are sent out. Previously, all emails were sent using the OJS user's email address in the "FROM" field. This unfortunately led to some issues with the journal's outgoing emails being flagged as "spoofed" by some email servers, since the email addresses in question \(eg. james@myinstitution.org"\) didn't match the domain name of the server sending the email \(eg. "myjournal.com"\). \(Technically, the emails were failing Sender Policy Framework \(SPF\) validation.\) Being flagged in this way is more serious than being considered spam: in many cases, the receiving email server won't even assign the email to a spam/junk queue, instead simply choosing to discard it. 
 
-**Solution 1 \(OMP, OJS\):** To prevent this from happening, the PKP development team has adopted an email notification method similar to other web applications such as Wordpress: send all email from the system using one central email address in the "FROM" field, with the intended recipients' email addresses in the "REPLY-TO" Field. The central email address to be used by default would be the one provided in **Journal Setup Step 1.2: Principal Contact**, which should match the domain name from which the journal sends mail. \(If this email address cannot match the sending domain on a per-journal basis, an alternate email address can be configured at the site level via the OJS config.inc.php file\). In addition, a new "Email Header" setting has been provided in **Journal Setup Step 1.4: Email Identification**, which can be used to provide explanatory text to the recipient. 
+#### **Solution 1 \(OMP, OJS\):** 
+
+To prevent this from happening, the PKP development team has adopted an email notification method similar to other web applications such as Wordpress: send all email from the system using one central email address in the "FROM" field, with the intended recipients' email addresses in the "REPLY-TO" Field. The central email address to be used by default would be the one provided in **Journal Setup Step 1.2: Principal Contact**, which should match the domain name from which the journal sends mail. \(If this email address cannot match the sending domain on a per-journal basis, an alternate email address can be configured at the site level via the OJS config.inc.php file\). In addition, a new "Email Header" setting has been provided in **Journal Setup Step 1.4: Email Identification**, which can be used to provide explanatory text to the recipient. 
 
 To properly configure this, we suggest the following: 
 
@@ -89,7 +91,9 @@ To properly configure this, we suggest the following:
 You are receiving this email on behalf of <journal-name>. In the event of a requested response, you may respond directly to this email.
 ```
 
-**Solution 2 \(OCS, but also OJS and OMP\):** Configure your install to use GMail's SMTP service, as per [this FAQ thread](https://pkp.sfu.ca/wiki/index.php?title=Using_gmail_SMTP).
+#### **Solution 2 \(OCS, but also OJS and OMP\):** 
+
+Configure your install to use GMail's SMTP service, as per [this FAQ thread](https://pkp.sfu.ca/wiki/index.php?title=Using_gmail_SMTP).
 
 More here still needs to be written. Will include information on: 
 
