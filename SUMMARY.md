@@ -8,6 +8,7 @@
   * [Export metadata to external sites and indexing services](data-import-and-export/export-metadata-to-external-sites-and-indexing-services.md)
   * [Use import/export plugins from the command line](data-import-and-export/use-import-export-plugins-from-the-command-line.md)
   * [Troubleshoot importing and exporting](data-import-and-export/troubleshoot-importing-and-exporting.md)
-* [Securing Your System](securing-your-system.md)
+* [Securing Your System](securing-your-system/README.md)
+  * [Managing Spam](securing-your-system/managing-spam.md)
 * [Email](email.md)
 
