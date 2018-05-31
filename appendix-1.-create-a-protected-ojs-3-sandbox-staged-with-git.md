@@ -73,7 +73,45 @@ These commands are done on the production install, and are your typical backup/a
   * rsync -avz public.tar.gz username@stagingserver.org:/~
   * rsync -avz files.tar.gz username@stagingserver.org:/~
 
-  
+## Install the submission, public and database files to the correct locations
+
+Install the database:
+
+* mysql -u ojs-sandbox -p ojs-sandbox &lt; ~/client\_db.sql \(this may differ depending on the username, database name and password you specified in 1.a\)\)
+
+Install the submission files:
+
+* tar -xvf ~/files.tar.gz &lt;wherever your sandbox files dir will be&gt;
+
+Install the public files:
+
+* tar xvf ~/public.tar.gz &lt;ojs-folder&gt;/public/
+
+Edit the config.inc.php file and change database and files\_dir parameters.
+
+* vi config.inc.php
+
+At this point, all relevant files and DB tables should be in place, and the config file should be pointing to those locations.
+
+## Sanitize all emails in the system so that the system doesn’t send out email by accident
+
+If you are running the sandbox on its own server, you may want to consider just disabling any and all email functionality on the server. But the following will also work \(in that any emails that are sent will be sent to non-production email addresses\).
+
+* mysql -u ojs-sandbox -p ojs-sandbox
+* UPDATE users SET email=CONCAT\(username,'@mailinator.com’\); \(this will set all user email addresses to username@mailinator.com\)
+* UPDATE authors SET email = 'test@example.com’ \(this will set all submission-related emails, eg. those of contributors, to test@example.com\)
+
+##  **\(Optional\) Add password protection to the site so that it isn’t accidentally accessed, crawled, etc.**
+
+We do this for all sandboxes by adding .htaccess and .htpasswd protection to the sandbox web root. Your systems folks would know how to do this.
+
+## **Run the upgrade**
+
+From the sandbox web root run this command:
+
+* php tools/upgrade.php upgrade
+
+At this point, if the upgrade completes, you should have a clean, protected sandbox upgrade running OJS 3.1 that you can now manage via git.
 
   
   
