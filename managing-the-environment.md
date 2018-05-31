@@ -19,18 +19,15 @@ PHP Safe Mode is not a recommended configuration and may not function properly. 
 
 #### Database Setup, Security, and Character Encoding
 
-Although OJS supports various database servers \(e.g. MySQL, PostgreSQL\), this guide assumes that you will be using MySQL for your OJS installation.  
+Although OJS supports various database servers \(e.g. MySQL, PostgreSQL\), this guide assumes that you will be using MySQL for your OJS installation.
 
+To ensure that database access is limited to only the tables required by your OJS installation, you should create a dedicated MySQL user account for OJS with limited system privileges. It is not recommended to use the MySQL ‘root’ user account for your OJS install. In addition, if you haven’t already, please ensure that you set a password for the MySQL ‘root’ user account \(by default, the MySQL ‘root’ user account does not require a password\).
 
-To ensure that database access is limited to only the tables required by your OJS installation, you should create a dedicated MySQL user account for OJS with limited system privileges. It is not recommended to use the MySQL ‘root’ user account for your OJS install. In addition, if you haven’t already, please ensure that you set a password for the MySQL ‘root’ user account \(by default, the MySQL ‘root’ user account does not require a password\).  
+To create a MySQL OJS user \(e.g. ‘ojs\_user’\) with access to an OJS database \(e.g. ‘ojs\_database’\), you will need to execute the following MySQL commands using the ‘root’ MySQL user account.
 
+Login to MySQL using the root MySQL user account
 
-To create a MySQL OJS user \(e.g. ‘ojs\_user’\) with access to an OJS database \(e.g. ‘ojs\_database’\), you will need to execute the following MySQL commands using the ‘root’ MySQL user account.  
-
-
-    Login to MySQL using the root MySQL user account
-
-    $ mysql -u root -p  
+    `$ mysql -u root -p`  
 
 
     Create a dedicated OJS user account
