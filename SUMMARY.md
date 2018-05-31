@@ -11,4 +11,5 @@
 * [Securing Your System](securing-your-system/README.md)
   * [Managing Spam](securing-your-system/managing-spam.md)
 * [Email](email.md)
+* [Appendix 1. Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
 
