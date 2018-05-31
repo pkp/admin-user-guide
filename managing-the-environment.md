@@ -1,4 +1,4 @@
-# Managing the Environment
+# Managing the Server Environment
 
 ### Configuring the Proper Environment {#docs-internal-guid-6febf1df-b712-a6c2-06bc-8713ee194a6c}
 
