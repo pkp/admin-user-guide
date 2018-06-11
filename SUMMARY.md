@@ -16,4 +16,6 @@
   * [Generating reports](statistics/generating-reports.md)
 * [Email](email.md)
 * [Appendix 1. Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
+* [Frequently Asked Questions](frequently-asked-questions.md)
+* [Frequently Encountered Problems](frequently-encountered-problems.md)
 
