@@ -12,8 +12,7 @@ To use this plugin you will need the following:
 * A basic understanding of XML
 * To be enrolled as a Journal Manager in the OJS journal
 
-If you are importing users into OJS, first create the XML import file.  Here is a sample XML import file: https://github.com/pkp/ojs/blob/master/plugins/importexport/users/sample.xml  
-
+If you are importing users into OJS, first create the XML import file.  Here is a sample XML import file: https://github.com/pkp/ojs/blob/master/plugins/importexport/users/sample.xml
 
 \* Please note that the XML format used by the Users XML Plugin in OJS 3 is different from the XML format used by the Plugin in OJS 2.  If you export data from OJS 2 and want to import it into OJS 3, you will have to edit the XML file first.
 
@@ -37,11 +36,15 @@ Once you have the valid XML import file, you can import it:
 4. Click Import Users
 5. You will be notified of any errors, or if the import was successful.
 
-To export article and issue metadata using the Native XML Plugin:
+![](../.gitbook/assets/users-xml-plugin-import.png)
+
+To export user accounts using the Users XML Plugin:
 
 1. Login to OJS as Journal Manager
 2. Go to Tools &gt; Import/Export &gt; Users XML Plugin
 3. Select the user accounts you wish to export by checking the box beside them.  
 4. Click Export Users
 5. The user accounts will be exported in XML format, and can be imported to this or another journal
+
+![](../.gitbook/assets/users-xml-plugin-export.png)
 
