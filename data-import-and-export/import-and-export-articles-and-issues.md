@@ -54,6 +54,8 @@ Next you can import each article with the Plugin.
 7. At the end of the Quick Submit Plugin form, you can select whether you want the article you are adding to be published immediately or unpublished, if you wish to publish it later.
 8. When you have finished entering all data for the article, click Save.
 
+![](../.gitbook/assets/quick-submit-plugin%20%282%29.png)
+
 ## Native XML Plugin
 
 The Native XML Plugin in OJS 3.x replaces the Articles and Issues XML Plugin, which was used in OJS 2 to import article and issue metadata into and out of OJS in an XML file.  It can be used to import and export single or multiple issues and/or articles, including comprehensive metadata. It can be used in the following cases:
@@ -98,6 +100,8 @@ Once you have the valid XML import file, you can import it:
 4. Click Import
 5. You will be notified of any errors, or if the import was successful.
 
+![](../.gitbook/assets/native-xml-plugin.png)
+
 To export article and issue metadata using the Native XML Plugin:
 
 1. Login to OJS as Journal Manager
@@ -107,6 +111,10 @@ To export article and issue metadata using the Native XML Plugin:
 5. Click Export
 6. The articles or issues will be exported in XML format, and can be imported to this or another journal
 
-\* Please note that using this plugin to export articles and issues will not only export all relevant metadata, but will include all article files \(HTML, PDF, etc.\) embedded within the XML document in Base64 encoding. This can result in large, cumbersome XML files, especially when multiple issues are exported at once. Opening them in an editor to view or change any XML data or metadata may be taxing for your computer, and it may take some time to download and/or upload said files, depending on your connection and the resources of the source server.  
+\* Please note that using this plugin to export articles and issues will not only export all relevant metadata, but will include all article files \(HTML, PDF, etc.\) embedded within the XML document in Base64 encoding. This can result in large, cumbersome XML files, especially when multiple issues are exported at once. Opening them in an editor to view or change any XML data or metadata may be taxing for your computer, and it may take some time to download and/or upload said files, depending on your connection and the resources of the source server.
+
+![](../.gitbook/assets/native-xml-plugin-export.png)
+
+  
 
 
