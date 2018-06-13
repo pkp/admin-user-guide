@@ -20,14 +20,18 @@ To use this plugin, you will need the following:
 
 First, ensure that the Quick Submit Plugin has been installed and enabled for your journal.  You will need to have the Journal Manager role to enable the plugin and the Administrator role to install the plugin.
 
+![](../.gitbook/assets/find-plugins.png)
+
 1. Go to Settings &gt; Website &gt; Plugins
 2. Under Installed Plugins, look for the Quick Submit Plugin.  If you see it listed, skip to step 8.
 3. If you do not see the Quick Submit Plugin under Installed Plugins, go to the Plugin Gallery tab.  
-4. Click on Quick Submit.  A popup box will open.
+4. Click on Quick Submit.  A popup box will open. 
 5. Click on Install.  If you do not see the Install button, you will need to ask the Administrator of your site to install the plugin for you.
 6. A popup box will open and ask “Are you sure you wish to install this plugin?”  Click OK and wait a few minutes while the installation completes.
 7. After the plugin has been installed, go back to the Installed Plugins tab and find the Quick Submit Plugin.
 8. Check the box to the right of the plugin name and description to enable the plugin.
+
+![](../.gitbook/assets/enabled-import-plugins.png)
 
 Next you will need to create the issues \(or issue\) that will contain the new articles you are importing.
 
@@ -35,7 +39,11 @@ Next you will need to create the issues \(or issue\) that will contain the new a
 2. Enter metadata for the issue and click Save.
 3. Do this for all of the issues you are uploading articles for.
 
+![](../.gitbook/assets/create-issue.png)
+
 Next you can import each article with the Plugin.
+
+![](../.gitbook/assets/import-plugins.png)
 
 1. Go to Tools &gt; Import/Export and select Quick Submit Plugin.
 2. Upload a cover image if you have one.  This field is optional and can be ignored.
