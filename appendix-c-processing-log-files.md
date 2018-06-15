@@ -56,7 +56,7 @@ In scenario 3, JM does not have to move the files. Each time the file loader tas
 
 In scenarios 1 and 2, if for some reason JM can’t move files for a whole week, in the next opportunity he can move all of them at once. The scheduled task will process one by one then, until the stage directory is empty again.
 
-### Rep**rocessing log files**
+## Rep**rocessing log files**
 
 If you need to reprocess any log file \(if a new robot list or geolocation database is introduced, or you fixed problems inside rejected files\) you can move them back to the stage process. Even if they were inside “rejected” or “archived” directories. They will be processed and any existing data from these logs will be replaced by reprocessed data.
 
