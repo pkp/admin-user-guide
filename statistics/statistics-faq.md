@@ -23,13 +23,11 @@ Also, it’s worth noting that you can still retrieve the old, basic usage metri
 
 ## **I’ve seen some OJS journals that display nice-looking article usage metrics on article landing pages. How do I configure that?**
 
-This option is only available for OJS 3.x using the Usage Statistics Plugin.  For instructions on how to enable and configure the Usage Statistics Plugin, see   
+This option is only available for OJS 3.x using the Usage Statistics Plugin.  For instructions on how to enable and configure the Usage Statistics Plugin, see the previous section in this document **Display Usage Statistics**.
 
+## How can I track usage by institution?
 
-Dashboard &gt; Settings &gt; Website &gt; Plugins &gt; Generic Plugins &gt; Usage Statistics Plugin &gt; Settings  
-
-
-From there you will have an option to enable the Statistics Display option:  
+This is not currently possible with OJS but will be available in the future.  
   
 
 
