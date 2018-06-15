@@ -14,6 +14,7 @@
   * [Definitions](statistics/definitions.md)
   * [An Introduction to the Framework](statistics/an-introduction-to-the-framework.md)
   * [Generate reports](statistics/generating-reports.md)
+  * [Display Usage Statistics](statistics/display-usage-statistics.md)
   * [Statistics FAQ](statistics/statistics-faq.md)
 * [Email](email.md)
 * [Appendix 1. Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
