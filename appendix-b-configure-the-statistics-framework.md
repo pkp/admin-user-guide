@@ -25,7 +25,7 @@ We won’t go into detail for every single configuration option for the plugin, 
 * Leave the “Compress Archives” option disabled, unless server space is a consideration \(see the Troubleshooting section below\)
 * Leave the “Data Privacy Option disabled, unless you can follow the instructions provided
 * Enable the “City” and “Region” options, and follow the section on Configuring Regional Data Tracking below
-* If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages
+* If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages. See the above section Display Usage Statistics for more information.
 
 ## **Configure Scheduled Tasks**
 
