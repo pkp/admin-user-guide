@@ -21,4 +21,5 @@
 * [Email](email.md)
 * [Appendix A: Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
 * [Appendix B: Configure the Statistics Framework](appendix-b-configure-the-statistics-framework.md)
+* [Appendix C: Processing Log Files](appendix-c-processing-log-files.md)
 
