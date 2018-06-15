@@ -1,4 +1,4 @@
-# Appendix 1. Create a Protected OJS 3 Sandbox Staged with Git
+# Appendix A: Create a Protected OJS 3 Sandbox Staged with Git
 
 The following document describes a general workplan for creating a git-based sandbox of a production journal that is not currently on git. It provides instructions on how to limit accidental access, outgoing email, etc. YMMV. Adapt for your own environment; use at your own risk.
 

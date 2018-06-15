@@ -17,6 +17,8 @@
   * [Display Usage Statistics](statistics/display-usage-statistics.md)
   * [Statistics FAQ](statistics/statistics-faq.md)
   * [Frequently Encountered Statistics Problems](statistics/frequently-encountered-problems.md)
+  * [Statistics Resources](statistics/statistics-resources.md)
 * [Email](email.md)
-* [Appendix 1. Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
+* [Appendix A: Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
+* [Appendix B: Configure the Statistics Framework](appendix-b-configure-the-statistics-framework.md)
 
