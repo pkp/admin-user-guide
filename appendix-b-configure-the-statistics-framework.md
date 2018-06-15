@@ -18,14 +18,59 @@ The plugin settings can be found in OJS 3 by going to Dashboard &gt; Settings &g
 
 We won’t go into detail for every single configuration option for the plugin, but we do suggest the following as a reasonable setup:
 
-1. If it is not already enabled, check the box to the right of the plugin name
-2. Click the blue arrow next to the plugin and then click **Settings**
-3. Enable “Create Log Files” if it isn’t enabled already
-4. Leave the “Parse Log File Regex” option alone unless you know what you are doing
-5. Leave the “Compress Archives” option disabled, unless server space is a consideration \(see the Troubleshooting section below\)
-6. Leave the “Data Privacy Option disabled, unless you can follow the instructions provided
-7. Enable the “City” and “Region” options, and follow the section on Configuring Regional Data Tracking below
-8. If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages 
+* If it is not already enabled, check the box to the right of the plugin name
+* Click the blue arrow next to the plugin and then click **Settings**
+* Enable “Create Log Files” if it isn’t enabled already
+* Leave the “Parse Log File Regex” option alone unless you know what you are doing
+* Leave the “Compress Archives” option disabled, unless server space is a consideration \(see the Troubleshooting section below\)
+* Leave the “Data Privacy Option disabled, unless you can follow the instructions provided
+* Enable the “City” and “Region” options, and follow the section on Configuring Regional Data Tracking below
+* If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages
+
+## **Configuring Scheduled Tasks**
+
+Once the Usage Statistics plugin has been enabled, you need to ensure that statistics are logged and processed as part of OJS’ “scheduled tasks." There are two ways to do this:
+
+#### **1. Enable the OJS Acron plugin**
+
+The plugin can be found in OJS 2 by going to User Home &gt; Journal Manager &gt; System Plugins &gt; Generic Plugins &gt; Acron Plugin
+
+The plugin can be found in OJS 3 by going to Dashboard &gt; Settings &gt; Website &gt; Plugins &gt; Generic Plugins &gt; Acron Plugin
+
+Once enabled, this plugin should result in the processing of log files \(along with other scheduled tasks, such as review and subscription reminders\).
+
+#### 2. Configure a server-side cron job
+
+This is a more advanced option, requiring command-line access to the server, and should only be configured by an experienced systems administrator. You will need to create a cron job that will trigger the following script in your OJS system directory:
+
+```text
+tools/runScheduledTasks.php
+```
+
+This script expects an accompanying parameter in the form of a pointer to an XML file describing the scheduled task. This file will differ depending on whether you are using OJS log files, external log files \(eg. Apache log files\), or OJS log files with an automated staging process. Most journals will be using the simple “OJS log file” option \(option 1 below\). The location of these XML files are slightly different depending on whether you are using OJS 2 or 3. The full commands are as follows, and will have to be added to the server cron job, ideally so that they run daily.
+
+**Commands to be run \(OJS 2\)**
+
+| **Process** | **Command** |
+| --- | --- | --- | --- |
+| OJS log files | php tools/runScheduledTasks.php plugins/generic/usageStats/scheduledTasks.xml |
+| OJS log files with automated staging process | php tools/runScheduledTasks.php plugins/generic/usageStats/scheduledTasksAutoStage.xml |
+| External log files | php tools/runScheduledTasks.php plugins/generic/usageStats/scheduledTasksExternalLogFiles.xml |
+
+**Commands to be run \(OJS 3\)**
+
+| **Process** | **Command** |
+| --- | --- | --- | --- |
+| OJS log files | php tools/runScheduledTasks.php lib/pkp/plugins/generic/usageStats/scheduledTasks.xml |
+| OJS log files with automated staging process | php tools/runScheduledTasks.php lib/pkp/plugins/generic/usageStats/scheduledTasksAutoStage.xml |
+| External log files | php tools/runScheduledTasks.php lib/pkp/plugins/generic/usageStats/scheduledTasksExternalLogFiles.xml |
+
+After you configure either the Acron plugin or a cron job, your statistics should start processing. They only process at set times: once every 24 hours if using the Acron plugin, and at whatever frequency set in the cron job, if that is being used. Wait for that amount of time, and then check to see if stats are now available. If they aren’t proceed to the Troubleshooting section.  
+  
+****
+
+  
+
 
   
 
