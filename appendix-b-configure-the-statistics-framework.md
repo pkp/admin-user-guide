@@ -10,29 +10,27 @@ There are three configuration steps that you will have to consider: configuring 
 
 ## Configure the Usage Statistics Plugin
 
-* Enable “Create Log Files” if it isn’t enabled already
-* Leave the “Parse Log File Regex” option alone unless you know what you are doing
-* Leave the “Compress Archives” option disabled, unless server space is a consideration \(see the Troubleshooting section below\)
-* Leave the “Data Privacy Option disabled, unless you can follow the instructions provided
-* Enable the “City” and “Region” options, and follow the section on Configuring Regional Data Tracking below
-* If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages
+OJS 2.4.3+ and 3+ include a generic Usage Statistics Plugin that is responsible for how these statistics are logged and recorded in the system. The plugin’s default configurations are reasonable, and work for most use cases, though you will want to review them after you install or upgrade OJS.  In order to enable the collection of usage data, make sure that this plugin is enabled.
 
-We won’t go into detail for every single configuration option for the plugin, but we do suggest the following as a reasonable setup:  
+The plugin settings can be found in OJS 2 by going to User Home &gt; Journal Manager &gt; System Plugins &gt; Generic Plugins &gt; Usage Statistics Plugin &gt; Settings
 
+The plugin settings can be found in OJS 3 by going to Dashboard &gt; Settings &gt; Website &gt; Plugins &gt; Generic Plugins &gt; Usage Statistics Plugin &gt; Settings
 
-In order to enable the collection of usage data, make sure that this plugin is enabled.  
+We won’t go into detail for every single configuration option for the plugin, but we do suggest the following as a reasonable setup:
 
+1. If it is not already enabled, check the box to the right of the plugin name
+2. Click the blue arrow next to the plugin and then click **Settings**
+3. Enable “Create Log Files” if it isn’t enabled already
+4. Leave the “Parse Log File Regex” option alone unless you know what you are doing
+5. Leave the “Compress Archives” option disabled, unless server space is a consideration \(see the Troubleshooting section below\)
+6. Leave the “Data Privacy Option disabled, unless you can follow the instructions provided
+7. Enable the “City” and “Region” options, and follow the section on Configuring Regional Data Tracking below
+8. If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages 
 
-Dashboard &gt; Settings &gt; Website &gt; Plugins &gt; Generic Plugins &gt; Usage Statistics Plugin &gt; Settings  
-
-
-… and in OJS 3 by going to:  
-
-
-User Home &gt; Journal Manager &gt; System Plugins &gt; Generic Plugins &gt; Usage Statistics Plugin &gt; Settings  
+  
 
 
-OJS 2.4.3+ and 3+ include a generic Usage Statistics Plugin that is responsible for how these statistics are logged and recorded in the system. The plugin’s default configurations are reasonable, and work for most use cases, though you will want to review them after you install or upgrade OJS. The plugin settings can be found in OJS 2 by going to:  
+  
 
 
   
