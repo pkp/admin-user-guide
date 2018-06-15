@@ -27,7 +27,7 @@ We won’t go into detail for every single configuration option for the plugin, 
 * Enable the “City” and “Region” options, and follow the section on Configuring Regional Data Tracking below
 * If available in your OJS install, consider enabling the Statistics Display Options if you want basic abstract and galley views to be available on article landing pages
 
-## **Configuring Scheduled Tasks**
+## **Configure Scheduled Tasks**
 
 Once the Usage Statistics plugin has been enabled, you need to ensure that statistics are logged and processed as part of OJS’ “scheduled tasks." There are two ways to do this:
 
@@ -65,9 +65,31 @@ This script expects an accompanying parameter in the form of a pointer to an XML
 | OJS log files with automated staging process | php tools/runScheduledTasks.php lib/pkp/plugins/generic/usageStats/scheduledTasksAutoStage.xml |
 | External log files | php tools/runScheduledTasks.php lib/pkp/plugins/generic/usageStats/scheduledTasksExternalLogFiles.xml |
 
-After you configure either the Acron plugin or a cron job, your statistics should start processing. They only process at set times: once every 24 hours if using the Acron plugin, and at whatever frequency set in the cron job, if that is being used. Wait for that amount of time, and then check to see if stats are now available. If they aren’t proceed to the Troubleshooting section.  
-  
-****
+After you configure either the Acron plugin or a cron job, your statistics should start processing. They only process at set times: once every 24 hours if using the Acron plugin, and at whatever frequency set in the cron job, if that is being used. Wait for that amount of time, and then check to see if stats are now available. If they aren’t proceed to the Troubleshooting section.
+
+## **Configure Regional Data Tracking**
+
+The Usage Statistics plugin can also track regional data, including visitor country, region and city information.
+
+**Note 1**: This is an entirely optional step.
+
+**Note 2:** Storing geographical data can take up a lot of space, and can also increase processing time when generating reports. If you are running into space issues, or are running into timeouts when attempting to generate reports, you may have to either increase disc or memory resources, or disable geographic logging.
+
+**Note 3:** If you don’t enable and configure geographic tracking immediately, and decide to enable it at a later date, you will have to reprocess your old log files in order for this data to be available in older usage statistics.
+
+In order to track this information:
+
+1. The Usage Statistics Plugin must have the Region and City options enabled as described above.
+2. The following server-side configuration must also be in place. This step requires command-line access to the server, and country and region information will not work unless this has been done.
+   1. Open a shell prompt on the server
+   2. Go into the OJS installation base directory
+   3. Execute the following commands:
+
+```text
+$ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+$ gunzip GeoLiteCity.dat.gz
+$ mv GeoLiteCity.dat plugins/generic/usageStats
+```
 
   
 
