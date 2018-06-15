@@ -1,4 +1,4 @@
-# Generating reports
+# Generate reports
 
 OJS’ reports can be broadly grouped into “usage” reports that contain usage metrics indicative of visitor readership, and “content” reports that provide data on the respective item \(eg. subscriber info\). Some of these reports also contain legacy information, provided that your OJS install was created at some point before OJS 2.4.3. OJS 3 has dropped support for legacy reports.
 
