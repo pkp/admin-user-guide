@@ -1,7 +1,6 @@
 # Frequently Asked Questions
 
-These are the most frequently asked questions and answers concerning OJS and statistics. This isn’t an exhaustive list. If you are running into further questions for which you don’t have answers, notify your hosting service provider, or take a look at the PKP Community Forum &lt;[https://forum.pkp.sfu.ca](https://forum.pkp.sfu.ca)&gt; to see if anyone else has run into the same thing.  
-
+These are the most frequently asked questions and answers concerning OJS and statistics. This isn’t an exhaustive list. If you are running into further questions for which you don’t have answers, notify your hosting service provider, or take a look at the PKP Community Forum &lt;[https://forum.pkp.sfu.ca](https://forum.pkp.sfu.ca)&gt; to see if anyone else has run into the same thing.
 
 ## **What’s the best possible thing I can do to ensure accurate usage reporting?**
 
