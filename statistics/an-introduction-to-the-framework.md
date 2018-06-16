@@ -1,4 +1,4 @@
-# An Introduction to the Framework
+# Introduction to the Statistics Framework
 
 “What counts as a view” can seem like a straightforward enough question when considering article use metrics, but there are any number of ways to provide - or complicate - the answer. Answering this question depends on which counting mechanism is being used \(eg. Google Analytics vs. log file hits vs. filtered metrics\); on whether attempting to review historical data spans different methodologies; and whether these methodologies have been configured correctly or not.
 

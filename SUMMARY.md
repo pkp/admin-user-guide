@@ -12,7 +12,7 @@
   * [Troubleshoot importing and exporting](data-import-and-export/troubleshoot-importing-and-exporting.md)
 * [Statistics](statistics/README.md)
   * [Definitions](statistics/definitions.md)
-  * [An Introduction to the Framework](statistics/an-introduction-to-the-framework.md)
+  * [Introduction to the Statistics Framework](statistics/an-introduction-to-the-framework.md)
   * [Types of Reports](statistics/generating-reports.md)
   * [Generate Reports - Examples and Tips](statistics/generate-reports-examples-and-tips.md)
   * [Display Usage Statistics](statistics/display-usage-statistics.md)
