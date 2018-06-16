@@ -16,11 +16,11 @@
   * [Types of Reports](statistics/generating-reports.md)
   * [Generate Reports - Examples and Tips](statistics/generate-reports-examples-and-tips.md)
   * [Display Usage Statistics](statistics/display-usage-statistics.md)
+  * [Configure the Statistics Framework](statistics/appendix-b-configure-the-statistics-framework.md)
+  * [Processing Log Files](statistics/appendix-c-processing-log-files.md)
   * [Frequently Asked Questions](statistics/statistics-faq.md)
   * [Frequently Encountered Statistics Problems](statistics/frequently-encountered-problems.md)
   * [Further Resources](statistics/statistics-resources.md)
 * [Email](email.md)
 * [Appendix A: Create a Protected OJS 3 Sandbox Staged with Git](appendix-1.-create-a-protected-ojs-3-sandbox-staged-with-git.md)
-* [Appendix B: Configure the Statistics Framework](appendix-b-configure-the-statistics-framework.md)
-* [Appendix C: Processing Log Files](appendix-c-processing-log-files.md)
 

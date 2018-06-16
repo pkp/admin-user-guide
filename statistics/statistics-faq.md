@@ -5,7 +5,7 @@ These are the most frequently asked questions and answers concerning OJS and sta
 
 ## **What’s the best possible thing I can do to ensure accurate usage reporting?**
 
-First, upgrade to the latest stable version of OJS 2 or 3. Optionally, also consider reprocessing your logs \(see Appendix B: Processing your Log Files\).
+First, upgrade to the latest stable version of OJS 2 or 3. Optionally, also consider reprocessing your logs \(see the previous section **Processing Log Files**\).
 
 Second, figure out what statistics you want, and use the same method to get them each time. If you are using the Custom Report Generator, make sure you save the URL it provides to you so you can re-run that particular report.
 

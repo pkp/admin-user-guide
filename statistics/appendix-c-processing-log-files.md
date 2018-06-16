@@ -1,4 +1,4 @@
-# Appendix C: Processing Log Files
+# Processing Log Files
 
 ## **Basic \(default\)**
 

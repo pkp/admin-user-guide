@@ -1,4 +1,4 @@
-# Appendix B: Configure the Statistics Framework
+# Configure the Statistics Framework
 
 This section is only relevant to those using OJS 2.4.3+ and OJS 3.0+. Older versions of OJS do not have this framework, and need no configuration.
 
