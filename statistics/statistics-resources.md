@@ -1,4 +1,4 @@
-# Statistics Resources
+# Further Resources
 
 Project COUNTER:  [https://www.projectcounter.org/](https://www.projectcounter.org/)
 
