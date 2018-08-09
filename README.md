@@ -4,9 +4,9 @@ This guide has been moved to our [PKP Documentation Hub](https://docs.pkp.sfu.ca
 
 The version of the guide you find here is no longer maintained, and this repository will be removed in the not too distant future. 
 
-The PKP Documentation Hub [can be found online here](https://docs.pkp.sfu.ca/).
+The PKP Documentation Hub [can be found online here](https://docs.pkp.sfu.ca/), and the code repository used to generate the Documentation Hub [can be found online here](https://github.com/pkp/pkp-docs/). 
 
-The code repository used to generate the Documentation Hub [can be found online here](https://github.com/pkp/pkp-docs/). 
+The Administrator's Guide [can be found in the Doc Hub here](https://docs.pkp.sfu.ca/admin-guide/en/), and the code [can be found in the repository here](https://github.com/pkp/pkp-docs/tree/master/admin-guide).
 
 If you are interested in contributing to PKP's documentation effort, you [can find information on doing so here](https://docs.pkp.sfu.ca/contributing/). (Our contribution instructions may not yet be 100% complete - please bear with us as we play a bit of catch-up!)
 
